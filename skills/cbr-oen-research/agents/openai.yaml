@@ -1,0 +1,4 @@
+interface:
+  display_name: "CBR-OEN Research"
+  short_description: "Design and govern falsifiable CBR experiments"
+  default_prompt: "Use $cbr-oen-research to develop the CBR-OEN programme with preregistered, reproducible, adversarial experiments."

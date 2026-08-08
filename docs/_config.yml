@@ -1,0 +1,20 @@
+title: "selfdriven Cloud"
+description: ""
+baseurl: ""
+url: ""
+context: "cloud-www"
+repo: "selfdriven-services/selfdriven-cloud-www"
+
+defaults:
+  - scope:
+      path: "pages"
+      type: "pages"
+    values:
+      layout: selfdriven
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - _well-known/
