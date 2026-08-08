@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://selfdriven.science/</loc></url>
+  <url><loc>https://selfdriven.science/llms.txt</loc></url>
+  <url><loc>https://selfdriven.science/.well-known/agents.json</loc></url>
+  <url><loc>https://selfdriven.science/schemas/agents-catalogue-v1.json</loc></url>
+  <url><loc>https://selfdriven.science/cbr-oen-research/SKILL.md</loc></url>
+  <url><loc>https://selfdriven.science/cbr-oen-research/references/programme.md</loc></url>
+  <url><loc>https://selfdriven.science/cbr-oen-research/references/protocol.md</loc></url>
+  <url><loc>https://selfdriven.science/cbr-oen-research/references/schemas-and-extension.md</loc></url>
+</urlset>

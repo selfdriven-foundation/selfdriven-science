@@ -1,0 +1,42 @@
+# selfdriven.science
+
+> Open scientific research resources from SelfDriven Foundation, including the Compute-Based Reality Open Experimental Network (CBR-OEN): a falsifiable programme testing whether dimensionality, topology, geometry, persistent structures, motion, causality, and quantitative physical correspondence can emerge from minimal computation.
+
+Use the CBR-OEN materials as research specifications and AI operating instructions, not as evidence that Compute-Based Reality is true. Preserve null results, failed replications, dependency gates, prohibited assumptions, and claim ceilings. The specification—not any single implementation—is the experiment.
+
+Canonical domain: https://selfdriven.science/
+
+## CBR Open Experimental Network
+
+- [CBR-OEN AI Skill](https://selfdriven.science/cbr-oen-research/SKILL.md): Primary instruction file for AI agents designing, reviewing, governing, analysing, or extending CBR-OEN.
+- [E001-E010 Programme](https://selfdriven.science/cbr-oen-research/references/programme.md): Experiment questions, dependencies, controls, endpoints, gates, and phase progression.
+- [Founding Protocol](https://selfdriven.science/cbr-oen-research/references/protocol.md): Preregistration, anti-overfitting, reproducibility, governance, institutional roles, decisions, claims, and publication rules.
+- [Evidence Schemas and E011+](https://selfdriven.science/cbr-oen-research/references/schemas-and-extension.md): Evidence graph, machine-readable records, gate logic, and extension rules.
+- [Agent Catalogue](https://selfdriven.science/.well-known/agents.json): Machine-readable catalogue of AI-usable resources published by this domain.
+
+## Core Experimental Sequence
+
+- CBR-E001: Emergent dimensionality
+- CBR-E002: Dimension-blind evolution
+- CBR-E003: 3-manifold emergence
+- CBR-E004: Explicit simplicial dynamics
+- CBR-E005: Manifold resilience under defects
+- CBR-E006: Emergent operational metric
+- CBR-E007: Structure-metric coupling
+- CBR-E008: Emergent geodesic motion
+- CBR-E009: Emergent causality
+- CBR-E010: Quantitative physical correspondence
+
+## Usage Guidance
+
+- Start with the AI Skill, then load only the reference needed for the task.
+- Treat E001-E010 as the frozen v1.0 baseline.
+- Apply R1-R3 reproducibility and CL0-CL7 claim levels separately.
+- Bind GO, GO_WITH_QUALIFICATION, REVISE, and STOP criteria before confirmatory execution.
+- Never encode the desired physical outcome into foundational rules, fitness, labels, selection, or stopping.
+- Cite the canonical source URL and exact document version when deriving specifications or claims.
+
+## Optional
+
+- [SelfDriven Science](https://selfdriven.science/): Human-facing research site.
+- [SelfDriven Foundation](https://selfdriven.foundation/): Publishing organisation.

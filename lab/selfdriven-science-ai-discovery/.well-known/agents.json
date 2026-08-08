@@ -1,0 +1,74 @@
+{
+  "$schema": "https://selfdriven.science/schemas/agents-catalogue-v1.json",
+  "schema_version": "1.0",
+  "kind": "ai-resource-catalogue",
+  "name": "SelfDriven Science AI Resource Catalogue",
+  "description": "Public research specifications and AI instruction resources published by SelfDriven Foundation.",
+  "canonical_url": "https://selfdriven.science/.well-known/agents.json",
+  "publisher": {
+    "name": "SelfDriven Foundation",
+    "url": "https://selfdriven.foundation/"
+  },
+  "discovery": {
+    "llms_txt": "https://selfdriven.science/llms.txt",
+    "homepage": "https://selfdriven.science/"
+  },
+  "resources": [
+    {
+      "id": "cbr-oen-research",
+      "kind": "ai-instruction-skill",
+      "name": "CBR-OEN Research",
+      "version": "1.0",
+      "status": "public",
+      "description": "Design, specify, review, govern, analyse, and extend the Compute-Based Reality Open Experimental Network as a falsifiable, preregistered, reproducible, and adversarial research programme.",
+      "canonical_url": "https://selfdriven.science/cbr-oen-research/SKILL.md",
+      "media_type": "text/markdown",
+      "protocol": "static-resource",
+      "interactive_endpoint": null,
+      "invocation": {
+        "skill_name": "cbr-oen-research",
+        "suggested_prompt": "Use the CBR-OEN Research skill to design, review, govern, or extend the experimental programme while preserving dependency gates, adversarial controls, reproducibility, evidence provenance, and conservative GO/REVISE/STOP decisions."
+      },
+      "capabilities": [
+        "experimental-design",
+        "preregistration",
+        "adversarial-review",
+        "evidence-graph",
+        "reproducibility-assessment",
+        "research-governance",
+        "roadmap-management",
+        "cbr-e001-e010",
+        "cbr-e011-extension"
+      ],
+      "references": [
+        {
+          "name": "E001-E010 Programme",
+          "url": "https://selfdriven.science/cbr-oen-research/references/programme.md",
+          "media_type": "text/markdown"
+        },
+        {
+          "name": "Founding Protocol",
+          "url": "https://selfdriven.science/cbr-oen-research/references/protocol.md",
+          "media_type": "text/markdown"
+        },
+        {
+          "name": "Evidence Schemas and E011+",
+          "url": "https://selfdriven.science/cbr-oen-research/references/schemas-and-extension.md",
+          "media_type": "text/markdown"
+        }
+      ],
+      "scientific_posture": {
+        "founding_principle": "CBR-OEN does not exist to prove Compute-Based Reality. It exists to make Compute-Based Reality testable.",
+        "negative_results_are_evidence": true,
+        "specification_is_the_experiment": true,
+        "physical_correspondence_requires_replication": "R3"
+      },
+      "license": null
+    }
+  ],
+  "a2a": {
+    "available": false,
+    "agent_card": null,
+    "note": "This catalogue describes static AI-usable research resources. It does not advertise an A2A service endpoint."
+  }
+}
