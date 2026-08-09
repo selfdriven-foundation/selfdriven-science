@@ -87,13 +87,12 @@ nav.scrolled {
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a { text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 500; transition: color .2s; }
 .nav-links a:hover { color: var(--text); }
-.nav-back { display: inline-flex; align-items: center; gap: 7px; }
 .nav-cta {
   background: var(--accent); color: #fff !important; padding: 9px 20px; border-radius: 999px;
   font-weight: 600; font-size: 14px; transition: transform .2s, box-shadow .2s;
 }
 .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 20px var(--accent-strong); }
-@media (max-width: 860px) { .nav-links a:not(.nav-cta):not(.nav-back) { display: none; } }
+@media (max-width: 860px) { .nav-links a:not(.nav-cta) { display: none; } }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -328,9 +327,8 @@ footer { border-top: 1px solid var(--border); padding: 44px 0 40px; margin-top: 
 <!-- NAV -->
 <nav id="nav">
   <div class="wrap nav-inner">
-    <a href="index.html" class="brand" aria-label="selfdriven.science home"><span class="brand-logo" role="img" aria-label="selfdriven.science"></span></a>
+    <a href="/" class="brand" aria-label="selfdriven.science home"><span class="brand-logo" role="img" aria-label="selfdriven.science"></span></a>
     <div class="nav-links">
-      <a href="index.html" class="nav-back"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Network</a>
       <a href="#question">Question</a>
       <a href="#programme">Programme</a>
       <a href="#roles">Roles</a>
@@ -655,17 +653,17 @@ footer { border-top: 1px solid var(--border); padding: 44px 0 40px; margin-top: 
         <div class="res-tag">&#9654; Podcast &middot; primer</div>
         <h3>Testing the computational foundations of reality</h3>
         <p>A short spoken introduction to what CBR-OEN is testing, how the network is organised, and why it is built to be challenged.</p>
-        <audio controls preload="metadata">
+        <audio controls preload="none">
           <source src="https://raw.githubusercontent.com/selfdriven-foundation/selfdriven-science/main/resources/podcasts/Testing_the_computational_foundations_of_reality.m4a" type="audio/mp4">
           Your browser can&rsquo;t play this audio inline &mdash; use the link below.
         </audio>
         <a class="res-fallback" href="https://github.com/selfdriven-foundation/selfdriven-science/blob/main/resources/podcasts/Testing_the_computational_foundations_of_reality.m4a" target="_blank" rel="noopener">Open on GitHub &#8599;</a>
       </div>
       <div class="res-side">
-        <a class="res-card res-link reveal" href="https://github.com/selfdriven-foundation/selfdriven-science/blob/main/resources/slides/CBR-OEN_Protocol.pdf" target="_blank" rel="noopener">
+        <a class="res-card res-link reveal" href="https://raw.githubusercontent.com/selfdriven-foundation/selfdriven-science/main/resources/slides/CBR-OEN_Protocol.pdf" download="CBR-OEN_Protocol.pdf" target="_blank" rel="noopener">
           <span class="res-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
-          <div><h4>CBR-OEN Protocol &mdash; slides</h4><p>The protocol deck as a PDF.</p></div>
-          <span class="res-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          <div><h4>CBR-OEN Protocol &mdash; slides</h4><p>Download the deck &mdash; PDF.</p></div>
+          <span class="res-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg></span>
         </a>
         <a class="res-card res-link reveal" href="https://github.com/selfdriven-foundation/selfdriven-science" target="_blank" rel="noopener">
           <span class="res-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.35.78 1.05.78 2.12 0 1.53-.01 2.77-.01 3.15 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></span>
@@ -685,7 +683,7 @@ footer { border-top: 1px solid var(--border); padding: 44px 0 40px; margin-top: 
       <h2>We invite independent groups to propose tests, implement specifications, replicate simulations, challenge methodology and analyse results.</h2>
       <p>CBR-OEN succeeds not if CBR is supported, but if it produces precise hypotheses, reproducible simulations, rigorous tests, independent implementations, honest replications and transparent negative results. If CBR fails, the network should tell us why. If it survives, the network should tell us how strongly.</p>
       <div class="hero-actions" style="justify-content:center;">
-        <a href="index.html" class="btn btn-primary">Back to the network
+        <a href="/" class="btn btn-primary">Back to selfdriven.science
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
@@ -699,7 +697,7 @@ footer { border-top: 1px solid var(--border); padding: 44px 0 40px; margin-top: 
   <div class="wrap">
     <div class="foot-inner">
       <div class="foot-brand">
-        <a href="index.html" class="brand" aria-label="selfdriven.science home"><span class="brand-logo" role="img" aria-label="selfdriven.science"></span></a>
+        <a href="/" class="brand" aria-label="selfdriven.science home"><span class="brand-logo" role="img" aria-label="selfdriven.science"></span></a>
         <p>CBR-OEN is the first collaboration on selfdriven.science — an open experimental network for testing foundational claims openly, independently and adversarially.</p>
       </div>
       <div class="foot-cols">
@@ -708,13 +706,14 @@ footer { border-top: 1px solid var(--border); padding: 44px 0 40px; margin-top: 
           <a href="#question">Founding question</a>
           <a href="#programme">Experiments E001–E010</a>
           <a href="#roles">Participant roles</a>
-          <a href="#artefacts">Spec & manifest</a>
+          <a href="#artefacts">Spec &amp; manifest</a>
+          <a href="https://raw.githubusercontent.com/selfdriven-foundation/selfdriven-science/main/resources/slides/CBR-OEN_Protocol.pdf" download="CBR-OEN_Protocol.pdf" target="_blank" rel="noopener">Download slides (PDF)</a>
         </div>
         <div class="foot-col">
-          <h5>Network</h5>
-          <a href="index.html">selfdriven.science</a>
-          <a href="index.html#how">How it works</a>
-          <a href="index.html#evidence">Evidence graph</a>
+          <h5>selfdriven Science</h5>
+          <a href="/">Home</a>
+          <a href="/#how">How it works</a>
+          <a href="/#evidence">Evidence graph</a>
           <a href="https://github.com/selfdriven-foundation/selfdriven-science" target="_blank" rel="noopener">Repository &#8599;</a>
         </div>
       </div>
