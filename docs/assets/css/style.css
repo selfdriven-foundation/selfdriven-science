@@ -421,3 +421,34 @@ h1 em,h2 em{font-style:normal;color:var(--orange)}
 	.evidence{margin-top:60px}
 	.relations li{gap:10px;font-size:12px}
 }
+
+/* ═══ selfdriven.science · CBR-OEN page ═════════════════════════════ */
+
+/* Emergence-chain glyphs in the dark layers panel */
+.layer-glyph{display:block;width:40px;height:40px;color:var(--orange-on-dark);margin:0 0 16px}
+.layers-foot{margin:34px 0 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);font-family:var(--font-mono);font-size:13px;color:rgba(255,255,255,.72)}
+
+/* Founding question beside a scope list */
+.scope-head .question{margin:22px 0 0;padding-left:16px;border-left:3px solid var(--orange);font-family:var(--font-display);font-size:1.15rem;line-height:1.4;letter-spacing:-.02em;color:var(--ink);max-width:none}
+.scope-head .question-label{display:block;margin:22px 0 -12px;font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--muted)}
+.scope-list li.featured p strong{color:var(--ink)}
+.flag{display:inline-block;margin-top:12px;font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--orange)}
+
+/* Spec + manifest code panels */
+.code-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.code-card{min-width:0;background:var(--panel);color:#ffffff;border-radius:10px;overflow:hidden}
+.code-head{display:flex;align-items:center;gap:14px;padding:14px 22px;border-bottom:1px solid rgba(255,255,255,.12);font-family:var(--font-mono);font-size:12px;color:rgba(255,255,255,.65)}
+.code-head .dots{display:flex;gap:6px}
+.code-head .dots i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.22)}
+.code-head .dots i:first-child{background:var(--orange-on-dark)}
+.code-card pre{margin:0;padding:22px;font-family:var(--font-mono);font-size:13px;line-height:1.7;color:rgba(255,255,255,.85);overflow-x:auto}
+.code-card .k{color:var(--orange-on-dark)}
+.code-card .v{color:#8fd6b2}
+.code-card .c{color:rgba(255,255,255,.45)}
+
+@media(max-width:960px){
+	.code-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+	.code-card pre{font-size:12px;padding:18px}
+}
