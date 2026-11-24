@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+	<meta charset="UTF-8" />
+	<title>{{ page.title }}</title>
+	<meta name="description" content="{{ page.description | escape }}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<link rel="shortcut icon" href="/assets/img/selfdriven-logo-round-blackcurrant-flamingo.png" type="image/png" />
+	<link rel="apple-touch-icon" href="/assets/img/selfdriven-logo-round-blackcurrant-flamingo.png" />
+	<meta property="og:title" content="{{ page.title | escape }}" />
+	<meta property="og:description" content="{{ page.description | escape }}" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/style.css" />
+	<link rel="stylesheet" href="/assets/css/codes.css" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+{%- assign papers = site.data.papers -%}
+{%- assign idx = -1 -%}
+{%- for p in papers -%}{%- if p.url == page.url -%}{%- assign idx = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+{%- assign pi = idx | minus: 1 -%}
+{%- assign ni = idx | plus: 1 -%}
+
+	<header class="header">
+		<a class="logo" href="/"><img class="logo-wordmark" src="/assets/img/selfdriven-logo-codes-flamingo-transparent.png" alt="selfdriven.codes" /></a>
+		<nav class="nav">
+			<a href="/#crisis">Crisis</a>
+			<a href="/#code">Code</a>
+			<a href="/#couriers">Couriers</a>
+			<a href="/#scenario">Scenario</a>
+			<a href="/#architecture">Architecture</a>
+			<a href="/#papers">Papers</a>
+		</nav>
+	</header>
+
+	<main class="main-content" id="main">
+		<div class="page-grid">
+			<article class="prose paper">
+				<p class="crumb"><a href="/">selfdriven.codes</a> · <a href="/#papers">Papers</a> · {{ page.series }} · {{ page.volume }}</p>
+				<h1>{{ page.heading }}<span class="paper-sub">{{ page.subheading }}</span></h1>
+				<p class="standfirst">{{ page.standfirst }}</p>
+
+				<dl class="paper-meta">
+					<div><dt>Publisher</dt><dd><a href="https://selfdriven.institute">selfdriven Institute</a></dd></div>
+					<div><dt>Series</dt><dd>{{ page.series }} · {{ page.volume }}</dd></div>
+					<div><dt>Reference</dt><dd><code>{{ page.reference }}</code></dd></div>
+					<div><dt>Version</dt><dd>{{ page.version }}</dd></div>
+					<div><dt>Issued</dt><dd>{{ page.issued }}</dd></div>
+					<div><dt>Classification</dt><dd>{{ page.classification }}</dd></div>
+				</dl>
+
+				{%- if page.toc %}
+				<details class="toc-inline">
+					<summary>Contents</summary>
+					<ol>{% for t in page.toc %}<li><a href="#{{ t.id }}">{{ t.title }}</a></li>{% endfor %}</ol>
+				</details>
+				{%- endif %}
+
+				{{ content }}
+
+				<div class="paper-foot">
+					<p>© 2026 selfdriven Foundation. Published by <a href="https://selfdriven.institute">selfdriven Institute</a>, Sydney.</p>
+					<p>Released for public discussion. Document reference: <code>{{ page.reference }}</code>.</p>
+				</div>
+
+				<nav class="page-nav" aria-label="Papers in this series">
+					{%- if idx > 0 -%}{%- assign prev = papers[pi] -%}<a href="{{ prev.url }}">← {{ prev.vol }} · {{ prev.title }}</a>{%- else -%}<a href="/#papers">← All papers</a>{%- endif -%}
+					{%- if ni < papers.size -%}{%- assign next = papers[ni] -%}<a href="{{ next.url }}">{{ next.vol }} · {{ next.title }} →</a>{%- else -%}<a href="/">selfdriven.codes →</a>{%- endif -%}
+				</nav>
+			</article>
+
+			<aside class="toc" aria-label="On this page">
+				{%- if page.toc %}
+				<p class="toc-label">Contents</p>
+				<ol>{% for t in page.toc %}<li><a href="#{{ t.id }}">{{ t.title }}</a></li>{% endfor %}</ol>
+				{%- endif %}
+				<p class="toc-label toc-series">The trilogy</p>
+				<ol class="series-list">
+					{%- for p in papers %}
+					<li{% if p.url == page.url %} class="current"{% endif %}><a href="{{ p.url }}"{% if p.url == page.url %} aria-current="page"{% endif %}><small>{{ p.vol }}</small>{{ p.title }}</a></li>
+					{%- endfor %}
+				</ol>
+			</aside>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="footer-left">
+			<a class="logo" href="/"><img class="logo-wordmark" src="/assets/img/selfdriven-logo-codes-flamingo-transparent.png" alt="selfdriven.codes" /></a>
+			<p>Human trust infrastructure for the synthetic reality era. A property of the selfdriven Foundation ecosystem.</p>
+		</div>
+		<div class="footer-cols">
+			<div>
+				<p class="footer-head">Papers</p>
+				{%- for p in papers %}
+				<a href="{{ p.url }}">{{ p.title }}</a>
+				{%- endfor %}
+			</div>
+			<div>
+				<p class="footer-head">Standards</p>
+				<a href="https://trustoverip.github.io/kswg-keri-specification/" target="_blank" rel="noopener">KERI / ACDC</a>
+				<a href="https://trustoverip.github.io/tswg-said-specification/draft-ssmith-said.html" target="_blank" rel="noopener">SAID anchors</a>
+				<a href="https://www.gleif.org/en/organizational-identity/introducing-the-verifiable-lei-vlei" target="_blank" rel="noopener">vLEI / GLEIF</a>
+			</div>
+			<div>
+				<p class="footer-head">Ecosystem</p>
+				<a href="https://selfdriven.foundation">selfdriven.foundation</a>
+				<a href="https://selfdriven.institute">selfdriven.institute</a>
+				<a href="https://selfdriven.services">selfdriven.services</a>
+				<a href="https://selfdriven.id">selfdriven.id</a>
+			</div>
+		</div>
+		<div class="footer-line">selfdriven.codes · Trust delivered by humans, verified by cryptography · © 2026 selfdriven Foundation</div>
+	</footer>
+
+</body>
+</html>
